@@ -21,3 +21,13 @@ public class ContratoVenda {
     @OneToMany(mappedBy = "contrato", cascade = CascadeType.ALL)
     private List<Parcela> parcelas;
 }
+
+
+// Adicione estes campos dentro da classe ContratoVenda
+@ManyToOne
+@JoinColumn(name = "cliente_id")
+private Cliente cliente;
+
+@OneToOne
+@JoinColumn(name = "lote_id")
+private Lote lote;
