@@ -13,5 +13,8 @@ public class Lote {
     private String quadra;
     private String numeroLote;
     private Double metragem;
-    private String status; // DISPONÍVEL, VENDIDO, RESERVADO
+    private String descricao;
+    
+    @Column(name = "situacao")
+    private String situacao; // DISPONÍVEL, VENDIDO, RESERVADO
 }

@@ -22,12 +22,11 @@ public class ContratoVenda {
     private List<Parcela> parcelas;
 }
 
-
-// Adicione estes campos dentro da classe ContratoVenda
+// Adicione estes relacionamentos na classe ContratoVenda.java
 @ManyToOne
-@JoinColumn(name = "cliente_id")
+@JoinColumn(name = "cliente_id", nullable = false)
 private Cliente cliente;
 
-@OneToOne
-@JoinColumn(name = "lote_id")
+@ManyToOne
+@JoinColumn(name = "lote_id", nullable = false)
 private Lote lote;

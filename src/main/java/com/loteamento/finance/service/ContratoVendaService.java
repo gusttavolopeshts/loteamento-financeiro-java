@@ -29,6 +29,9 @@ public class ContratoVendaService {
             p.setContrato(contrato);
             contrato.getParcelas().add(p);
         }
+		
+		// REGRA DE PARIDADE: Atualiza o status do lote para VENDIDO
+		contrato.getLote().setSituacao("VENDIDO");
         return repository.save(contrato);
     }
 }

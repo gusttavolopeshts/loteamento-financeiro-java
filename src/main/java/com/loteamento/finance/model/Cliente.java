@@ -14,4 +14,12 @@ public class Cliente {
     private String cpfCnpj;
     private String email;
     private String telefone;
+    
+    // Campos para igualar ao projeto original
+    private String logradouro;
+    private String numero;
+    private String bairro;
+    private String cidade;
+    private String estado;
+    private String cep;
 }
