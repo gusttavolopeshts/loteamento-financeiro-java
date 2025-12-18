@@ -31,4 +31,12 @@ public class ContratoVendaController {
         service.salvarNovoContrato(contrato);
         return "redirect:/contratos/novo?sucesso";
     }
+	
+	@GetMapping
+	public String listarTodos(Model model) {
+    // Busca todos os contratos para exibir na tabela
+    model.addAttribute("contratos", service.buscarTodos());
+    return "contratos/lista-contratos";
 }
+}
+
